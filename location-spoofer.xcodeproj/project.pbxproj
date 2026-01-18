@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		069D2DA488871331C1570CDD /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1A448A024912E5C0C1B224 /* NetworkExtension.framework */; };
 		268C86E6F4E47C957CD36D57 /* GoLocationSpoofer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39104973165BCC05DD24A29 /* GoLocationSpoofer.swift */; };
 		3C9DB8643C9203C44CAF40AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5254CDFD133A13476AE2AF /* ContentView.swift */; };
+		40F0D4822F1C5869006411B3 /* LocationSpoofer.icon in Resources */ = {isa = PBXBuildFile; fileRef = 40F0D4812F1C5869006411B3 /* LocationSpoofer.icon */; };
 		52F0E3807FF47779CDFAE271 /* CoordinateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D64E112D2AC008374EF191 /* CoordinateInputView.swift */; };
 		54E76E1073DFE78B6C6DB93B /* libgolocationspoofer.a in Resources */ = {isa = PBXBuildFile; fileRef = 23337A02247D09C30D523817 /* libgolocationspoofer.a */; };
 		70AB670271233CE16623001B /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5331D5ACB7EA6F706F801C6 /* LocationConfiguration.swift */; };
@@ -54,7 +55,8 @@
 		23337A02247D09C30D523817 /* libgolocationspoofer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgolocationspoofer.a; sourceTree = "<group>"; };
 		39D64E112D2AC008374EF191 /* CoordinateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateInputView.swift; sourceTree = "<group>"; };
 		3DE17083883692D03165972E /* LocationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfiguration.swift; sourceTree = "<group>"; };
-		5737967BEF59669E52D3D4B0 /* location-spoofer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "location-spoofer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F0D4812F1C5869006411B3 /* LocationSpoofer.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = LocationSpoofer.icon; sourceTree = "<group>"; };
+		5737967BEF59669E52D3D4B0 /* location-spoofer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "location-spoofer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CFF77E36A77F6B247F9B6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E18131A58929A987A008A9B /* location-spoofer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "location-spoofer.entitlements"; sourceTree = "<group>"; };
 		93A434E903E691E1D2443178 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		B4E4622044DFB3E5F8DDBE2A = {
 			isa = PBXGroup;
 			children = (
+				40F0D4812F1C5869006411B3 /* LocationSpoofer.icon */,
 				DC92D01FB6A36C2CB723C07A /* App */,
 				B600CC4C1C0CD995589CFC7D /* build */,
 				C628EE71A531D3540CA4A63B /* GoSpoofer */,
@@ -241,7 +244,6 @@
 				7881FD145BC3CD4CC103A32E /* XCRemoteSwiftPackageReference "swift-nio" */,
 				5A9E72E64AEA73DC79B7A4AE /* XCRemoteSwiftPackageReference "swift-log" */,
 			);
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -256,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F0D4822F1C5869006411B3 /* LocationSpoofer.icon in Resources */,
 				9E99EEB5A95845A2D311B143 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,10 +310,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = LocationSpoofer;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Resources/location-spoofer.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,18 +330,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Tunnel/location-spoofer-tunnel.entitlements";
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/GoSpoofer",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/GoSpoofer";
 				INFOPLIST_FILE = Tunnel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/GoSpoofer/build",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/GoSpoofer/build";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-lgolocationspoofer",
@@ -419,10 +420,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = LocationSpoofer;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Resources/location-spoofer.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,18 +499,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Tunnel/location-spoofer-tunnel.entitlements";
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/GoSpoofer",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/GoSpoofer";
 				INFOPLIST_FILE = Tunnel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/GoSpoofer/build",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/GoSpoofer/build";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-lgolocationspoofer",
