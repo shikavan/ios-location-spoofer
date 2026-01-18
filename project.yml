@@ -32,11 +32,12 @@ targets:
       - path: Resources
         excludes:
           - "**/.DS_Store"
+          - "Assets.xcassets"
+      - path: AppIcon.icon
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: dev.duti.location-spoofer
         INFOPLIST_FILE: Resources/Info.plist
-        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         CODE_SIGN_ENTITLEMENTS: Resources/location-spoofer.entitlements
         ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: "$(inherited)"
         LD_RUNPATH_SEARCH_PATHS:
@@ -62,8 +63,7 @@ targets:
           - "go.mod"
           - "go.sum"
           - "CGoLocationSpoofer.modulemap"
-      - path: GoSpoofer/build/libgolocationspoofer.a
-        buildPhase: none
+          - "libgolocationspoofer.a"
     
     settings:
       base:
